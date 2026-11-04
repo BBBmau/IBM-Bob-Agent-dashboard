@@ -1,0 +1,73 @@
+{
+  "brand": {
+    "name": "Agent Control",
+    "eyebrow": "Autonomous operations",
+    "description": "A live, read-only view of agent work sourced directly from Firestore.",
+    "accent": "#8b5cf6"
+  },
+  "collections": {
+    "tasks": "tasks",
+    "agents": "agents",
+    "steps": "steps"
+  },
+  "fields": {
+    "task": {
+      "title": "product",
+      "status": "status",
+      "result": "result",
+      "summary": "status_message",
+      "currentStep": "current_step",
+      "currentStepNumber": "current_step_number",
+      "currentStepDescription": "current_step_description",
+      "currentStepDetails": "current_step_details",
+      "stepsCompleted": "steps_completed",
+      "attempts": "attempts",
+      "priority": "priority",
+      "agentId": "lease_owner",
+      "updatedAt": "updated_at",
+      "createdAt": "created_at",
+      "completedAt": "completed_at",
+      "heartbeatAt": "heartbeat_at",
+      "prUrl": "pr_url",
+      "prNumber": "pr_number",
+      "commitSha": "commit_sha",
+      "ciConclusion": "ci_conclusion",
+      "humanReviewReason": "human_review_reason"
+    },
+    "agent": {
+      "title": "",
+      "status": "status",
+      "result": "last_task_result",
+      "summary": "last_task_message",
+      "currentStep": "current_step",
+      "currentStepNumber": "current_step_number",
+      "currentStepDescription": "current_step_description",
+      "currentStepDetails": "current_step_details",
+      "stepsCompleted": "",
+      "attempts": "",
+      "priority": "",
+      "agentId": "current_task_id",
+      "updatedAt": "updated_at",
+      "createdAt": "created_at",
+      "completedAt": "last_task_completed_at",
+      "heartbeatAt": "heartbeat_at",
+      "prUrl": "",
+      "prNumber": "",
+      "commitSha": "",
+      "ciConclusion": "",
+      "humanReviewReason": ""
+    }
+  },
+  "statusGroups": {
+    "queued": ["queued", "pending", "ready"],
+    "active": ["leased", "working", "running", "in_progress"],
+    "completed": ["completed", "success", "succeeded"],
+    "failed": ["failed", "error", "cancelled"],
+    "review": ["needs_human", "human_review", "blocked", "deferred"]
+  },
+  "staleAgentSeconds": 600,
+  "requireAuthentication": true,
+  "links": {
+    "sourceRepository": "https://github.com/BBBmau/list-resource-mmv1-agent"
+  }
+}
